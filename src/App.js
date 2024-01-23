@@ -1,5 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg"
+import "./App.css"
+
+import BusinessList from "./components/BusinessList.js"
+import SearchBar from "./components/SearchBar.js"
 
 function App() {
   return (
@@ -7,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to.
         </p>
         <a
           className="App-link"
@@ -18,8 +21,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <BusinessList />
+      <SearchBar />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
