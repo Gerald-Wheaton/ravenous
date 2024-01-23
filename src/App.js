@@ -1,28 +1,36 @@
 import logo from "./logo.svg"
 import "./App.css"
 
+import { useState, useEffect } from "react"
+
 import BusinessList from "./components/BusinessList.js"
 import SearchBar from "./components/SearchBar.js"
 
 function App() {
+  const [desiredBusiness, setDesiredBusiness] = useState()
+  const [desiredCity, setDesiredCity] = useState()
+
+  const [b, setB] = useState()
+
+  const searchBusiness = (business) => {
+    setDesiredBusiness(business)
+  }
+
+  const searchCity = (city) => {
+    setDesiredCity(city)
+  }
+
+  useEffect(() => {})
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <img className="App-bg-image" /> */}
       </header>
-      <BusinessList />
-      <SearchBar />
+      <body className="App-search-bars">
+        <SearchBar searchBusiness={searchBusiness} searchCity={searchCity} />
+        <BusinessList business={b} city={desiredCity} />
+      </body>
     </div>
   )
 }

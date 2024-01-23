@@ -1,9 +1,16 @@
 import React from "react"
+import { useState, useEffect } from "react"
 
 import Business from "./Business.js"
 import businesses from "./BusinessData.js"
 
-const BusinessList = () => {
+const BusinessList = (props) => {
+  const { searchedBusiness, searchedCity } = props
+
+  useEffect(() => {
+    console.log(searchedBusiness)
+  })
+
   return businesses.map((business, key) => (
     <Business
       key={key}
