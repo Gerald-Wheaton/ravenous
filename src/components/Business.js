@@ -1,23 +1,16 @@
 import React from "react"
 
-const Business = (props) => {
-  const {
-    name,
-    address,
-    city,
-    state,
-    zipCode,
-    category,
-    rating,
-    reviewCount,
-  } = props
+import "../styles/business.css"
 
+const Business = (props) => {
+  const { name, address, city, state, zipCode, category, rating, reviewCount } =
+    props
 
   return (
-    <div>
+    <div className="column">
       {/*<img src={image} />*/}
       <h1>{name}</h1>
-      <div>
+      <div className="business-card">
         <p>{address}</p>
         <p>{city}</p>
         <p>

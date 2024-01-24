@@ -15,7 +15,7 @@
 
 .App-header {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
-  background: url("./HarborView.jpg");
+  background: url("../HarborView.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;

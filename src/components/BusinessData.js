@@ -32,6 +32,17 @@ const businesses = [
     rating: "5.5",
     reviewCount: 78,
   },
+  {
+    image: "",
+    name: "Fish Nuggies",
+    address: "50 fades of rey",
+    city: "Buckees",
+    state: "Gulf of Mexico",
+    zipCode: "20946",
+    category: "Fish and Nuggets",
+    rating: "5.5",
+    reviewCount: 42000,
+  },
 ]
 
 export default businesses
