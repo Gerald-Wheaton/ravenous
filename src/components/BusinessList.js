@@ -9,10 +9,6 @@ import "../styles/business.css"
 const BusinessList = (props) => {
   const { searchedBusiness, searchedCity } = props
 
-  useEffect(() => {
-    console.log(searchedBusiness)
-  })
-
   return (
     <div className="container">
       {businesses.map((business, key) => (
