@@ -7,13 +7,14 @@ import businesses from "./BusinessData.js"
 import "../styles/business.css"
 
 const BusinessList = (props) => {
-  const { searchedBusiness, searchedCity } = props
+  const { business, searchedCity } = props
 
   return (
     <div className="container">
       {businesses.map((business, key) => (
         <Business
           key={key}
+          image={business.image}
           name={business.name}
           address={business.address}
           city={business.city}

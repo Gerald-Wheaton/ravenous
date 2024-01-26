@@ -18,20 +18,15 @@ function App() {
     setDesiredCity(city)
   }
 
-  useEffect(() => {
-    console.log(desiredBusiness)
-  }, [desiredBusiness])
-
   return (
     <div className="App">
       <header className="App-header">
         <div className="header-bar">
           <h1 className="header-text">BE/\CH eats </h1>
         </div>
-        {/* <img className="App-bg-image" /> */}
+        <SearchBar searchBusiness={searchBusiness} searchCity={searchCity} />
       </header>
       <body className="App-search-bars">
-        <SearchBar searchBusiness={searchBusiness} searchCity={searchCity} />
         <BusinessList business={desiredBusiness} city={desiredCity} />
       </body>
     </div>
