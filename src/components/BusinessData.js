@@ -11,7 +11,7 @@ const businesses = [
     reviewCount: 1200,
   },
   {
-    image: "../images/FishNuggies.jpeg",
+    image: `../images/FishNuggies.jpeg`,
     name: "Fish Nuggies",
     address: "50 fades of rey",
     city: "Buckees",
@@ -42,6 +42,17 @@ const businesses = [
     category: "Tacos y mas",
     rating: "2.5",
     reviewCount: 3000,
+  },
+  {
+    image: "../images/Buckees.jpeg",
+    name: "Buckees",
+    address: "34 Rest Stop rd",
+    city: "Montana",
+    state: "SC",
+    zipCode: "28374",
+    category: "Junk Food and Ghas",
+    rating: "23.5",
+    reviewCount: 40000,
   },
 ]
 

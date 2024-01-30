@@ -15,8 +15,13 @@ const Business = (props) => {
     reviewCount,
   } = props
 
+  console.log(image)
+
   return (
     <div className="column">
+      <div className="image-container">
+        <img src={image} />
+      </div>
       <h1 className="title">{name}</h1>
       <div className="business-info-container">
         <div className="business-info-column left-column">

@@ -26,7 +26,7 @@ function App() {
         </div>
         <SearchBar searchBusiness={searchBusiness} searchCity={searchCity} />
       </header>
-      <body className="App-search-bars">
+      <body className="app-content-container">
         <BusinessList business={desiredBusiness} city={desiredCity} />
       </body>
     </div>

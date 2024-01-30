@@ -15,7 +15,7 @@
 
 .App-header {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
-  background: url("../images/HarborView.jpg");
+  background: url("../../public/images/HarborView.jpg");
   background-size: cover;
   /* background-position: center; */
   background-attachment: scroll;
@@ -46,7 +46,10 @@
   margin: 0;
 }
 
-.App-search-bars {
+.app-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-link {
