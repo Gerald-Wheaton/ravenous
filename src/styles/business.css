@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+}
+
+.column {
+  flex: 0 0 calc(33.3333% - 20px);
+  margin: 10px;
+}
+
+.image-container {
+  width: 100%; /* Set the width and height of the container */
+  height: 280px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%; /* Make sure the image fills the container */
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+}
+
+.business-info-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.title {
+  color: #152636;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.business-info-column {
+  flex: 0 0 calc(50%);
+  font-size: 11px;
+  /* text-wrap: wrap; */
+  white-space: nowrap;
+  line-height: 35%;
+}
+
+.left-column {
+  text-align: left;
+  width: 50%; /* or any desired width */
+}
+
+.right-column {
+  text-align: right;
+  width: 50%; /* or any desired width */
+}
+
+.business-category {
+  font-size: 14px;
+  color: #152636;
+  font-weight: 800;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
