@@ -50,7 +50,7 @@ const businesses = [
     city: "Montana",
     state: "SC",
     zipCode: "28374",
-    category: "Junk Food and Ghas",
+    category: "Junk and Ghas",
     rating: "23.5",
     reviewCount: 40000,
   },

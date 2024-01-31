@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import Business from "./Business.js"
 import businesses from "./BusinessData.js"
 
-import "../styles/business.css"
+// import "../styles/business.css"
+import "../styles/GridLayout.css"
 
 const BusinessList = (props) => {
   const { searchedBusiness, searchedCity } = props
@@ -18,16 +19,17 @@ const BusinessList = (props) => {
     setBSearch(searchedBusiness)
     let t = []
     businesses.filter((business) => {
-      if (business.name.includes("Fr")) {
+      if (business.name.includes(searchedBusiness)) {
         t.push(business)
       }
     })
 
-    console.log(t)
+    console.log(searchedBusiness)
   }, [searchedBusiness])
 
   return (
-    <div className="container">
+    // <div className="container">
+    <div className="grid-container">
       {businesses.map((business, key) => (
         <Business
           key={key}
