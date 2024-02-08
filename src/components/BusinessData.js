@@ -1,4 +1,4 @@
-const businesses = [
+const businessData = [
   {
     image: "../images/Fratellies.jpeg",
     name: "Fratellies",
@@ -56,4 +56,4 @@ const businesses = [
   },
 ]
 
-export default businesses
+export default businessData

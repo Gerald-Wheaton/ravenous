@@ -1,49 +1,58 @@
 import React from "react"
-import { useState, useEffect } from "react"
 
 import Business from "./Business.js"
-import businesses from "./BusinessData.js"
+import businessData from "./BusinessData.js"
 
-// import "../styles/business.css"
-import "../styles/GridLayout.css"
+import "../styles/gridLayout.css"
 
 const BusinessList = (props) => {
-  const { searchedBusiness, searchedCity } = props
-  const [bSearch, setBSearch] = useState()
+  const { search } = props
 
-  const filteredData = businesses.filter((business) =>
-    business.name.includes(bSearch)
-  )
-
-  useEffect(() => {
-    setBSearch(searchedBusiness)
-    let t = []
-    businesses.filter((business) => {
-      if (business.name.includes(searchedBusiness)) {
-        t.push(business)
-      }
-    })
-
-    console.log(searchedBusiness)
-  }, [searchedBusiness])
+  const searchIsActive = (obj) => {
+    let isActive = false
+    if (obj) {
+      isActive = !Object.values(obj).every((value) => value === "")
+    }
+    return isActive
+  }
 
   return (
-    // <div className="container">
     <div className="grid-container">
-      {businesses.map((business, key) => (
-        <Business
-          key={key}
-          image={business.image}
-          name={business.name}
-          address={business.address}
-          city={business.city}
-          state={business.state}
-          zipCode={business.zipCode}
-          category={business.category}
-          rating={business.rating}
-          reviewCount={business.reviewCount}
-        />
-      ))}
+      {searchIsActive(search)
+        ? businessData
+            .filter(
+              (business) =>
+                (!search.business || business.name === search.business) &&
+                (!search.place || business.city === search.place)
+            )
+            .map((business, key) => (
+              <Business
+                key={key}
+                image={business.image}
+                name={business.name}
+                address={business.address}
+                city={business.city}
+                state={business.state}
+                zipCode={business.zipCode}
+                category={business.category}
+                rating={business.rating}
+                reviewCount={business.reviewCount}
+              />
+            ))
+        : businessData.map((business, key) => (
+            <Business
+              key={key}
+              image={business.image}
+              name={business.name}
+              address={business.address}
+              city={business.city}
+              state={business.state}
+              zipCode={business.zipCode}
+              category={business.category}
+              rating={business.rating}
+              reviewCount={business.reviewCount}
+            />
+          ))}
     </div>
   )
 }

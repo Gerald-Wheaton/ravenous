@@ -1,7 +1,6 @@
 import React from "react"
 
-//import "../styles/business.css"
-import "../styles/GridLayout.css"
+import "../styles/gridLayout.css"
 
 const Business = (props) => {
   const {

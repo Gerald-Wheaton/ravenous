@@ -7,27 +7,24 @@ import BusinessList from "./components/BusinessList.js"
 import SearchBar from "./components/SearchBar.js"
 
 function App() {
-  const [desiredBusiness, setDesiredBusiness] = useState("")
-  const [desiredCity, setDesiredCity] = useState("")
+  const [search, setSearch] = useState()
 
-  const searchBusiness = (business) => {
-    setDesiredBusiness(business)
-  }
-
-  const searchCity = (city) => {
-    setDesiredCity(city)
+  const searchResults = (business) => {
+    setSearch(business)
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="header-bar">
+        <div className="header-banner">
           <h1 className="header-text">BE/\CH eats </h1>
         </div>
-        <SearchBar searchBusiness={searchBusiness} searchCity={searchCity} />
+        <div className="header-search">
+          <SearchBar searchResults={searchResults} />
+        </div>
       </header>
       <body className="app-content-container">
-        <BusinessList business={desiredBusiness} city={desiredCity} />
+        <BusinessList search={search} />
       </body>
     </div>
   )

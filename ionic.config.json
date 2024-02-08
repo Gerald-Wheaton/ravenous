@@ -1,0 +1,7 @@
+{
+  "name": "ravenous",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

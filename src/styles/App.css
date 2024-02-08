@@ -17,24 +17,28 @@
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
   background: url("../../public/images/HarborView.jpg");
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   background-attachment: scroll;
   height: 430px;
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(3px + 2vmin);
+  display: flex;
   position: relative;
+
+  display: grid;
+  grid-template-columns: 1;
 }
 
-.header-bar {
+.header-banner {
   background-color: #b4d2d3;
   height: 20%;
   width: 100%;
   position: absolute;
   top: 0;
-  left: 50%; /* Adjust as needed */
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -44,6 +48,10 @@
 .header-text {
   color: #ffffff;
   margin: 0;
+}
+
+.header-search {
+  padding-top: 140px;
 }
 
 .app-content-container {
